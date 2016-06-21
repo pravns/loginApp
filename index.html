@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login and Register form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body class="home">
+    <div id="myTabContent" class="tab-content" > 
+      <!--screen1 Login & Registration-->
+      <div class = "container">
+        <h1 align = "center">Welcome to Login and Register form</h1> 
+      </div>
+      <br><br>
+      <div id="login_and_register " class="tab-pane fade in active" style="display:block;"> 
+        <div class="col-sm-5"></div>
+        <div class="col-sm-7">
+          <button type="button" class="btn btn-info btn-md" data-target="#login" data-toggle="modal">Login</button>
+          <button type="button" class="btn btn-info btn-md" data-target="#register" data-toggle="modal">Register</button>
+        </div>
+        <div id="confirm"> </div>
+           <!-- login form start-->
+          <div class="modal" id="login">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Login</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form role="form" method="POST" id="login-form">
+                        <div class="form-group">
+                          <input type="text" name="email" id="lemail" class="form-control input-sm" placeholder="Enter email address">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" name="password" id="lpassword" class="form-control input-sm" placeholder="Enter Password">
+                        </div>
+                        <input type="submit" value="Login" id ="login-button" onclick="login_validate();" class="btn btn-info btn-block"/>
+                      </form>
+                    </div>
+                  </div>
+                </div><!-- closing of modal body-->
+              </div> <!-- closing of modal content-->
+            </div> <!--closing of modal dialog -->
+          </div> <!--closing of login modal-->
+          <!-- login form end-->
+          <!-- Registration form start-->
+          <div class="modal" id="register">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Please Register  <small>It's free!</small></h3>
+                    </div>
+                    <div class="panel-body">
+                      <form role="form" method="POST" id="register-form">
+                        <div class="form-group">
+                          <input type="text" name="uname" id="user_name" class="form-control input-sm" placeholder="Enter your user name"/>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <input type="text" name="firstname" id="first_name" class="form-control input-sm" placeholder="First Name"/>
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <input type="text" name="lastname" id="last_name" class="form-control input-sm" placeholder="Last Name"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" name="email" id="remail" class="form-control input-sm" placeholder="Email Address"/>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password"/>
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <input type="password" name="password2" class="form-control input-sm" placeholder="Confirm Password"/>
+                            </div>
+                          </div>
+                        </div>
+                        <input type="submit" id="register-button" value="Register" onclick="register_validate();" class="btn btn-info btn-block"/>
+                      </form>
+                    </div>
+                  </div>
+                </div><!-- closing of modal body-->
+              </div> <!-- closing of modal content-->
+            </div> <!--closing of modal dialog -->
+          </div> <!--closing of Register modal-->
+          <!-- Registration form end-->
+      </div>
+    </div> <!--End of myTabcontent -->
+    <div id="screen2" style="display:none"> 
+      <h1>Welcome to Screen2</h1>
+      <div id ="displayuser">
+      </div>
+    </div>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/additional-methods.min.js"></script>
+    <script src="E:\Codingmart Technologies\Login & registration\js\validate.js"></script>
+    <script type="text/javascript" src="E:\Codingmart Technologies\Login & registration\js\localstorage_db.js"></script>
+  </body>
+</html>
